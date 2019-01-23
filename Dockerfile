@@ -1,6 +1,6 @@
 FROM debian AS build
 RUN apt-get update \
- && apt-get install -y git curl build-essential libssl-dev zlib1g-dev
+ && apt-get install -y git gcc make libssl-dev zlib1g-dev
 WORKDIR /opt/MTProxy
 RUN git clone https://github.com/TelegramMessenger/MTProxy .
 RUN make
