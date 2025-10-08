@@ -9,7 +9,7 @@ Dockerfile for MTProxy
 
 ### Running
 
-    docker run -d --restart=always \
+    docker run -d --restart=unless-stopped \
         -p 10000:443 \
         -v proxy-config:/data \
         -e SECRET=00000000000000000000000000000000 \
